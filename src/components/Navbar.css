@@ -1,0 +1,43 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+
+#nav-logo{
+    width: 200px;
+}
+
+#nav-logo img{
+    width: 100%;
+
+}
+
+.nav-list-cont{
+    width: 100%;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.nav-list li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-family: 'Roboto Serif', serif;
+}
+
+.nav-list li a:hover{
+
+}
