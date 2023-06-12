@@ -2,16 +2,15 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
+    padding: 5px 80px;
 }
 
 #nav-logo{
-    width: 200px;
+    width: 75px;
 }
 
 #nav-logo img{
-    width: 100%;
-
+    width: 75px;
 }
 
 .nav-list-cont{
@@ -25,19 +24,90 @@ nav{
     padding: 0;
 }
 
-.nav-list li{
+.nav-list li,
+.nav-list-mob li
+{
     list-style: none;
-    padding: 0 20px;
+    padding: 20px 20px 0;
+    margin: 25px 0;
     position: relative;
 }
 
-.nav-list li a{
+.nav-list li a,
+.nav-list-mob li a{
     text-decoration: none;
     font-size: 1.3rem;
     color: black;
     font-family: 'Roboto Serif', serif;
+    transition: 0.2s ease-in-out;
 }
 
-.nav-list li a:hover{
+.nav-list li a:hover,
+.nav-list li a:active,
+.nav-list-mob li a:hover,
+.nav-list-mob li a:active
+{
+    color: orange;
+}
+
+.nav-list li a:hover::after,
+.nav-list li a:active::after,
+.nav-list-mob li a:active::after,
+.nav-list-mob li a:hover::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: orange;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+}
+
+.nav-list-cont-mob{
+    width: 100%;
+    position: absolute;
+    height: auto;
+    top: 190px;
+    right: -110%;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-list-cont-mob.active{
+    right: 0;
+}
+
+.nav-list-mob{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    
+}
+
+@media screen and (max-width:900px){
+
+    .nav-list-cont{
+        display: none;
+    }
+
+    #mobile{
+        display: block
+    }
+
+    #nav-logo{
+        width: 50px;
+    }
+    
+    #nav-logo img{
+        width: 50px;
+    }
 
 }
