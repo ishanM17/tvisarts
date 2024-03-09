@@ -1,13 +1,22 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './Navbar.jsx';
+import Home from './Home.jsx'
+import ClassDetail from './ClassDetail.jsx';
+import ContactForm from './ContactForm.jsx';
+import Footer from './Footer.jsx';
 import './App.css';
-import Navbar from './Navbar';
-import Hero from './Hero';
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/classes/:age/:classId" element={<ClassDetail />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

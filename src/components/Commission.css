@@ -1,0 +1,140 @@
+.commission-container{
+    padding: 15% 10%;
+    scroll-margin-top: 70px;
+}
+
+.commission-container{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.commission-content{
+    max-width: 50%;
+}
+
+.commission-content h2{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+.commission-content h3{
+    font-size: 2rem;
+    margin-bottom: 7%;
+}
+
+.commission-content button{
+    width: 50%;
+    font-size: 2.2rem;
+}
+
+#commission1{
+    position: relative;
+    bottom: 200px;
+    transform: rotate(20deg);
+    width: 30%;
+}
+
+#commission2{
+    position: relative;
+    transform: rotate(20deg);
+    top: 180px;
+    right: 40px;
+    width: 30%;
+}
+
+@media screen and (max-width:1600px){
+    .commission-content h2{
+        font-size: 3rem;
+    }
+    .commission-content h3{
+        font-size: 1.5rem;
+    }
+    .commission-content button{
+        font-size: 2rem;
+    }
+    #commission1{
+        width: 20%;
+    }
+    #commission2{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:1250px){
+    .commission-content h2{
+        font-size: 2.5rem;
+    }
+    .commission-content h3{
+        font-size: 1rem;
+    }
+    .commission-content button{
+        font-size: 1.7rem;
+    }
+    #commission1{
+        bottom: 150px;
+    }
+    #commission2{
+        top: 130px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .commission-content h2{
+        font-size: 2rem;
+    }
+    .commission-content h3{
+        font-size: 0.75rem;
+    }
+    .commission-content button{
+        font-size: 1.2rem;
+    }
+    #commission1{
+        bottom: 125px;
+    }
+    #commission2{
+        top: 105px;
+    }
+}
+
+@media screen and (max-width:800px){
+    .commission-content h2{
+        font-size: 1.5rem;
+    }
+    .commission-content h3{
+        font-size: 0.5rem;
+    }
+    .commission-content button{
+        font-size: 0.8rem;
+    }
+    #commission1{
+        bottom: 100px;
+    }
+    #commission2{
+        top: 80px;
+    }
+}
+
+@media screen and (max-width:565px){
+    #commission2{
+        display: none;
+    }
+
+    #commission1{
+        bottom: 20px;
+        width: 30%;
+    }
+
+    .commission-content h2{
+        font-size: 1rem;
+    }
+    .commission-content h3{
+        font-size: 0.5rem;
+    }
+    .commission-content button{
+        font-size: 0.8rem;
+        width: 80%;
+    }
+}

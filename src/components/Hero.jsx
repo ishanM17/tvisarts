@@ -1,13 +1,14 @@
 import React from "react";
-import './Hero.css'
-import Navbar from "./Navbar";
+import './Hero.css';
 
 function Hero() {
     return (
-        <div className="container-fluid">
-            <img src="./images/hero-bg.jpg" style={{display: 'none' , width: '100%' }} />
+        <div className="container-fluid" id="homeNav">
+            <img src="./images/hero-bg.jpg" style={{display: 'none' , width: '100%' }} alt="landing"/>
             <div className="title-container">
-                <h1 className="title">TVISARTS</h1>
+                <div className="text-container">
+                    <h1 className="title heading-font">TVISARTS</h1>
+                </div>
             </div>
         </div>
     );

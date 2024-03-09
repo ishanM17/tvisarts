@@ -1,8 +1,16 @@
+.nav-container{
+    width: 100%;
+    position: sticky;
+    z-index: 999;
+    background-color: white;
+    top: 0;
+}
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 80px;
+    padding: 0 5%;
 }
 
 #nav-logo{
@@ -24,19 +32,26 @@ nav{
     padding: 0;
 }
 
-.nav-list li,
-.nav-list-mob li
+.nav-list li
 {
+    text-align: center;
+    list-style: none;
+    padding: 10px 20px 0;
+    margin: 25px 0;
+    position: relative;
+}
+
+.nav-list-mob li{
     list-style: none;
     padding: 20px 20px 0;
-    margin: 25px 0;
+    margin: 3% 0;
     position: relative;
 }
 
 .nav-list li a,
 .nav-list-mob li a{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: black;
     font-family: 'Roboto Serif', serif;
     transition: 0.2s ease-in-out;
@@ -47,7 +62,7 @@ nav{
 .nav-list-mob li a:hover,
 .nav-list-mob li a:active
 {
-    color: orange;
+    color: rgb(255, 102, 0);
 }
 
 .nav-list li a:hover::after,
@@ -58,7 +73,7 @@ nav{
     content: "";
     width: 30%;
     height: 2px;
-    background: orange;
+    background: rgb(255, 102, 0);
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -72,12 +87,11 @@ nav{
     width: 100%;
     position: absolute;
     height: auto;
-    top: 190px;
     right: -110%;
     z-index: 99;
     background-color: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(5px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-list-cont-mob.active{
@@ -89,10 +103,14 @@ nav{
     flex-direction: column;
     align-items: center;
     padding: 0;
-    
+    height: 100vh;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1100px){
+
+    nav{
+        padding: 15px 80px 5px;
+    }
 
     .nav-list-cont{
         display: none;
@@ -103,11 +121,21 @@ nav{
     }
 
     #nav-logo{
-        width: 50px;
+        width: 70px;
     }
     
     #nav-logo img{
-        width: 50px;
+        width: 100%;
     }
 
+}
+
+@media screen and (max-width:800px){
+    nav{
+        padding: 10px 40px 2px;
+    }
+
+    #nav-logo{
+        width: 50px;
+    }
 }

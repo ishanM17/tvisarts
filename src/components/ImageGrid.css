@@ -1,0 +1,9 @@
+.grid{
+    width: 35%;
+    column-count: 3;
+    column-width: 33%;
+}
+
+.img-container{
+    padding: 4px 0px;
+}

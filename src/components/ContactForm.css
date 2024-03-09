@@ -1,0 +1,31 @@
+.contact-form{
+    margin: 5% 20%;
+    padding: 2%;
+    background-color: rgb(255, 102, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    border-radius: 10px;
+    scroll-margin-top: 200px
+}
+
+.contact-form-button{
+    width: 30%;
+    padding: 1% 2%;
+    background-color: transparent;
+    margin: 2%;
+}
+
+.button-disabled{
+    background-color: rgb(255, 102, 0, 0.4);
+}
+
+.button-disabled:hover{
+    background-color: rgb(255, 102, 0, 0.4);
+    color: rgb(255, 102, 0);
+}
+
+@media screen and (max-width: 900px){
+    .contact-form{
+        margin: 50px  5% 100px;
+    }
+}
+
