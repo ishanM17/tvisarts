@@ -12,7 +12,7 @@ export default function ClassCard(props) {
                 <h2 className="card-subtext para-font">{props.age}</h2>
             </div>
             <div className="centered">
-                <button onClick={()=>window.open("/classes/"+props.ageGroup+"/"+props.ind, '_blank')}>More Details</button>
+                <button className="orange-button" onClick={()=>window.open("/classes/"+props.ind, '_blank')}>More Details</button>
             </div>
 
         </div>

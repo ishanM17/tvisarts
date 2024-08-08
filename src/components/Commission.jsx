@@ -9,7 +9,7 @@ export default function Commission() {
             <div className="commission-content">
                 <h2 className="heading-font">Turn your photo into timeless art</h2>
                 <h3 className="para-font">The perfect gift or souvenir for your loved ones</h3>
-                <HashLink smooth to="/contact#contactNav"><button>Enquire Now!</button></HashLink>
+                <HashLink smooth to="/contact#contactNav"><button className="orange-button">Enquire Now!</button></HashLink>
             </div>
             <img id="commission2" src="./images/commission2.png" alt="commission2" />
         </div>

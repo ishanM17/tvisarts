@@ -14,7 +14,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-btn">
-                <HashLink smooth to="/contact#contactNav"><button>Contact us!</button></HashLink>
+                <HashLink smooth to="/contact#contactNav"><button className="orange-button">Contact us!</button></HashLink>
                 </div>
             </div>
             <div className="footer-right">

@@ -1,32 +1,34 @@
-import {React, useState} from "react";
-import './Gallery.css'
-import ImageGrid from "./ImageGrid";
+import {React, useState} from 'react';
+import GalleryCarousel from './GalleryCarousel';
+import './Gallery.css';
+import paintings from '../paintings';
 
-export default function Gallery(){
+const buttonWidth = 200;
+const tabWidth = 300;
 
-    const tabHeaders = ["Sketches", "Water Colours", "Potraits", "Oil & Acrylics", "Traditional", "Relief"];
-
+export default function Widgets(){
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div style={{display: "flex", justifyContent: "center"}}>
-            <div className="widget">
-                <header>
-                    {tabHeaders.map((tab, index)=>(
-                        <button
-                            onClick={() => setActiveIndex(index)}
-                            key={tab}
-                        >
-                            {tab}
-                        </button>
-                    ))}
-                </header>
-                <div className="content">
-                    <ImageGrid index={activeIndex}/>
+        <div className='widget-container' id='galleryNav'>
+            <header>
+                <div className='tabs heading-font'>
+                    {
+                        paintings.map((ele, ind)=>(
+                            <button
+                                key={ele.id}
+                                className={`widget-button ${activeIndex===ind? "active":""}`}
+                                onClick={() => setActiveIndex(ind)}
+                            >
+                                {ele.type}
+                            </button>
+                        ))
+                    }
                 </div>
+            </header>
+            <div className='widget-content'>
+                <GalleryCarousel items={paintings[activeIndex].items} />
             </div>
         </div>
-        
-    )
-
+    );
 }

@@ -2,18 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import ClassFeature from "./ClassFeature";
 import './ClassDetail.css';
-import adultClassData from "../AdultClassData";
-import childrenClassData from "../childrenClassData";
+import classData from "../classData";
 
 export default function ClassDetail() {
     const navigate = useNavigate();
     const [data, setData] = useState({ features: {} });
-    const { age, classId } = useParams();
+    const { classId } = useParams();
     useEffect(() => {
-        if (age === "children" && classId >= 1 && classId <= childrenClassData.length) {
-            setData(childrenClassData[classId - 1]);
-        } else if (age === "adults" && classId >= 1 && classId <= adultClassData.length) {
-            setData(adultClassData[classId - 1]);
+        if (classId >= 1 && classId <= classData.length) {
+            setData(classData[classId - 1]);
+            console.log(data);            
         } else {
             navigate("/");
         }
