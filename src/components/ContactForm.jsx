@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import './ContactForm.css';
 
@@ -9,7 +10,7 @@ export default function ContactForm() {
 
     const navigate = useNavigate();
 
-    const [disabled, setDisabled]  = useState(false);
+    const [disabled, setDisabled] = useState(false);
     const [input, setInput] = useState({
         date: currentDate,
         userName: "",
@@ -45,9 +46,21 @@ export default function ContactForm() {
         )
             .then((res) => res.json())
             .then((data) => {
-                setDisabled(false);
-                alert("Thank you for your enquiry. We will get in touch with you ASAP!");
-                navigate("/");
+                emailjs.send(
+                    'service_j5sbf0f',
+                    'template_ld2q3zt',
+                    {},
+                    'OJY8PZqEYlw3tfGwB'
+                )
+                .then(() => {
+                    setDisabled(false);
+                    alert("Thank you for your enquiry. We will get in touch with you ASAP!");
+                    navigate("/");
+                })
+                .catch((error) => {
+                    setDisabled(false);
+                    alert("Form saved, but failed to send email. Please try again.");
+                });
             })
             .catch((error) => {
                 setDisabled(false);
@@ -114,8 +127,8 @@ export default function ContactForm() {
                     rows="4" />
             </div>
             <div className="centered mt-5">
-                <button type="submit" disabled={disabled} className={disabled?"contact-form-button button-disabled":"contact-form-button"}>
-                    {disabled?"...":"Submit!"}
+                <button type="submit" disabled={disabled} className={disabled ? "contact-form-button button-disabled" : "contact-form-button"}>
+                    {disabled ? "..." : "Submit!"}
                 </button>
             </div>
         </form>

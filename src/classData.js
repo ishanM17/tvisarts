@@ -20,7 +20,7 @@ const classData = [
     {
         id: 1,
         src: "/images/ganesh.png",
-        src2: "/images/ganesh-detail.png",
+        src2: "/images/ganesh-detail.jpg",
         src3: "/images/ganesh-process.png",
         heading: "Ganesha Idol Workshop",
         detail: [
