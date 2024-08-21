@@ -16,7 +16,7 @@ export default function ContactForm() {
         userName: "",
         email: "",
         mobile: "",
-        subject: "",
+        subject: "Classes for Children",
         comment: ""
     });
 
