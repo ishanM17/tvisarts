@@ -28,7 +28,7 @@ const classData = [
         ],
         features: {
             size: "Size-8 inch",
-            age: "Kids(above 10) and Adults",
+            age: "Kids(above 5yrs) and Adults",
             date: "24th Aug",
             timings: "10:00 am-12:00 pm",
             fees: "$30",
